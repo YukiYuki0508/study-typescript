@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+// ==============================
+// Settings
+// ==============================
+$use-wordpress: false !default;
+$use-global-box-sizing: true !default;
+$use-flexbox: true !default;
+
+// ==============================
+// Variables
+// * breakpoints
+// * font
+// * color
+// * flexbox
+// ==============================
+
+// Breakpoints
+$break-xs: 480px !default;
+$break-s: 768px !default;
+$break-m: 1024px !default;
+$break-l: 1200px !default;
+
+// Font
+$font: -apple-system, Helvetica, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', '游ゴシック', 'メイリオ', Meiryo, 'Lucida Grande', sans-serif !default;
+
+// Color
+$color: #333 !default;
+$background: #fff !default;
+$main-color: #fff !default;
+$sub-color: #fff !default;
+$accent-color: #fff !default;
+
+// Flexbox
+$flex-padding: 15px;
