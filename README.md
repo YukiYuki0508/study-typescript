@@ -1,6 +1,6 @@
-# Template for Website
+# Study TypeScript
 
-Webサイトを作るときの個人用テンプレートです。
+TypeScriptの勉強です。よくある実装をTypeScriptで記述してみました。
 
 ## Required / 必要なもの
 
