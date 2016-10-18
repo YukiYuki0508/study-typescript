@@ -4,3 +4,19 @@
     @include respond-to(small) {
     }
 }
+.breadcrumb {
+    background: #ddd;
+    color: #333;
+    text-align: center;
+    margin-top: 15px;
+    p {
+        line-height: 2;
+        a {
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                text-decoration: none;
+                opacity: 0.66;
+            }
+        }
+    }
+}
