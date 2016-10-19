@@ -1,16 +1,17 @@
 @charset "utf-8";
 
 .footer {
-    @include respond-to(small) {
-    }
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #ddd;
 }
 .breadcrumb {
-    background: #ddd;
     color: #333;
     text-align: center;
-    margin-top: 15px;
     p {
-        line-height: 2;
+        line-height: 30px;
         a {
             transition: all 0.3s ease-in-out;
             &:hover {

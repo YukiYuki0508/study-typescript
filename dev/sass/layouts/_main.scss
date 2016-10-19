@@ -1,8 +1,18 @@
 @charset "utf-8";
 
+html, body{
+   height: 100%;
+ }
+.page-container{
+  width: 100%;
+  position: relative;
+  height: auto !important; /*IE6対策*/
+  height: 100%; /*IE6対策*/
+  min-height: 100%;
+}
+
 .main {
-  @include respond-to(small) {
-  }
+  padding-bottom: 30px;
 }
 
 .container {

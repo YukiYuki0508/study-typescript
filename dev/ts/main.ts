@@ -9,9 +9,18 @@ import { ToggleMenu } from "./toggleMenu";
 var options = {
     nav: ".nav",
     btnOpen: ".open-menu",
-    btnClose: ".close-menu ",
+    btnClose: ".close-menu",
 };
 
 $(function() {
-    var menu = new ToggleMenu(options);
+    new ToggleMenu(options);
+});
+
+import { Tab } from "./tab";
+
+$(function() {
+    new Tab({
+        tabs: ".tab-menu li",
+        contents: ".tab-contents",
+    });
 });
