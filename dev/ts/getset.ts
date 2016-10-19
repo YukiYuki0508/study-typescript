@@ -1,19 +1,14 @@
 "use strict";
 
-interface Human {
-    name: string;
 
-}
-
-export class HumanName implements Human {
-    name: string;
+export class Human {
     private _name: string;
 
-    get Name(): string {
+    get name(): string {
         return this._name;
     }
 
-    set Name(name: string) {
+    set name(name: string) {
         this._name = name;
     }
 }

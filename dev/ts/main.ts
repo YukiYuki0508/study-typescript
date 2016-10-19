@@ -26,10 +26,10 @@ $(function() {
     new Tab(options);
 });
 
-import { HumanName } from "./getset";
+import { Human } from "./getset";
 
 $(function() {
-    var yuki = new HumanName();
-    yuki.Name= "yuki";
-    console.log(yuki.Name);
+    var yuki = new Human();
+    yuki.name = "yuki";
+    console.log(yuki.name);
 });
