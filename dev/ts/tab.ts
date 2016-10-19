@@ -1,4 +1,5 @@
 "use strict";
+
 interface Options {
     tabs: string;
     contents: string;
