@@ -2,19 +2,18 @@
 
 interface Human {
     name: string;
-    getName(): string;
-    setName(name): void;
+
 }
 
-export class Name implements Human {
+export class HumanName implements Human {
     name: string;
     private _name: string;
 
-    getName(): string {
+    get Name(): string {
         return this._name;
     }
 
-    setName(name: string): void {
+    set Name(name: string) {
         this._name = name;
     }
 }
