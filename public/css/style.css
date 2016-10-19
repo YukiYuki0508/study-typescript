@@ -302,18 +302,38 @@ html {
   color: #333;
   text-align: center; }
 
+.footer {
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #ddd; }
+
 .breadcrumb {
-  background: #ddd;
   color: #333;
-  text-align: center;
-  margin-top: 15px; }
+  text-align: center; }
   .breadcrumb p {
-    line-height: 2; }
+    line-height: 30px; }
     .breadcrumb p a {
       transition: all 0.3s ease-in-out; }
       .breadcrumb p a:hover {
         text-decoration: none;
         opacity: 0.66; }
+
+html, body {
+  height: 100%; }
+
+.page-container {
+  width: 100%;
+  position: relative;
+  height: auto !important;
+  /*IE6対策*/
+  height: 100%;
+  /*IE6対策*/
+  min-height: 100%; }
+
+.main {
+  padding-bottom: 30px; }
 
 .container {
   padding: 0 20px;
@@ -381,6 +401,43 @@ html {
   @media print, screen and (min-width: 768px) {
     .main--scroll-top {
       height: 1500px; } }
+
+.tab-menu {
+  width: 600px;
+  margin: 0 auto;
+  font-size: 0; }
+  .tab-menu li {
+    width: 200px;
+    line-height: 60px;
+    display: inline-block;
+    font-size: 1.4rem;
+    text-align: center;
+    background: #f0ad4e;
+    box-sizing: border-box;
+    border: 3px solid #d9534f; }
+    .tab-menu li:first-child, .tab-menu li:nth-child(2) {
+      border-right: none; }
+    .tab-menu li.selected {
+      background: #d9534f; }
+    .tab-menu li a {
+      display: block;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333; }
+      .tab-menu li a:hover {
+        background: #d9534f; }
+
+.tab-contents {
+  width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: 3px solid #d9534f;
+  border-top: none;
+  height: 100px;
+  text-align: center;
+  padding: 20px 0; }
+  .tab-contents.hide-tab {
+    display: none; }
 
 .btn {
   background: #ccc;
