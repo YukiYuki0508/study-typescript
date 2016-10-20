@@ -3,7 +3,7 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Study Typescript</title>
+  <title>Input Control</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no,address=no,email=no">
@@ -23,23 +23,48 @@
 <body>
   <div class="page-container">
     <header class="header">
-      <h1>Study Typescript</h1>
+      <h1>Input Control</h1>
     </header>
     <!-- /.header -->
     <main class="main">
       <div class="container">
-        <ul class="jump-each-page">
-          <li><a href="./scroll-top.html">Scroll Top</a></li>
-          <li><a href="./toggle-menu.html">Toggle Menu</a></li>
-          <li><a href="./tab.html">Tab</a></li>
-          <li><a href="./agree.html">Input Control</a></li>
-        </ul>
+        <form action="" class="form01">
+          <table class="form-table form-table--agree">
+            <tbody>
+              <tr>
+                <th>
+                  個人情報の取り扱いについて
+                  <br>
+                  <span class="t-red t-bold">［必須］</span>
+                </th>
+                <td>
+                  個人情報の取り扱いについてご同意をいただければ、下記の「同意する」にチェックを入れてください。
+                  <br>
+                  <input type="checkbox" name="agree" id="agree" value="同意する">
+                  <label for="agree">同意する</label>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  ご要望
+                  <span class="t-red t-bold">［必須］</span>
+                </th>
+                <td>
+                  <textarea name="comment" id="comment"></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
       </div>
       <!-- /.container -->
     </main>
     <!-- /.main -->
     <footer class="footer">
-
+      <div class="breadcrumb">
+        <p><a href="./index.html">Topページ</a> > Tab</p>
+      </div>
+      <!-- /.breadcrumb -->
     </footer>
     <!-- /.footer -->
   </div>

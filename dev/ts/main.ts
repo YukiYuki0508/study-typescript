@@ -4,6 +4,7 @@ $(function() {
     new ScrollTop('.to-top'); // <= 引数にボタンのエレメントを指定。
 });
 
+
 import { ToggleMenu } from "./toggleMenu";
 
 $(function() {
@@ -16,6 +17,7 @@ $(function() {
     new ToggleMenu(options);
 });
 
+
 import { Tab } from "./tab";
 
 $(function() {
@@ -26,10 +28,18 @@ $(function() {
     new Tab(options);
 });
 
+
 import { Human } from "./getset";
 
 $(function() {
     var yuki = new Human();
     yuki.name = "yuki";
-    console.log(yuki.name);
+    // console.log(yuki.name);
+});
+
+
+import  { ToggleDisable } from "./agree";
+
+$(function() {
+    new ToggleDisable('#agree');
 });
