@@ -46,11 +46,5 @@ $(function() {
         form: ".form-agree",
     };
 
-    let toggleDisable = new ToggleDisable(options);
-
-    toggleDisable.addElement('input:not([name="agree"])');
-    toggleDisable.addElement('textarea');
-    toggleDisable.addElement('select');
-
-    toggleDisable.setDisabled();
+    new ToggleDisable(options);
 });

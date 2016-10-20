@@ -29,18 +29,29 @@
         border: none;
         border-radius: 0;
         outline: none;
+        &[disabled] {
+            background: rgba(0,0,0,0.3);
+        }
     }
-    input#agree {
+    input[type="checkbox"], input[type="radio"] {
         border: 1px solid #9d9d9d;
         width: 12px;
         height: 12px;
-        border-radius: 3px;
         cursor: pointer;
         box-sizing: border-box;
         position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
         &:checked {
-            box-shadow: 0 0 0 3px #f2dede;
+            box-shadow: 0 0 0 3px #cdcdcd;
         }
+        &:checked:before {
+            opacity: 1;
+        }
+    }
+    input[type="checkbox"] {
+        border-radius: 3px;
         &:before {
             transition: opacity 0.2s linear;
             position: absolute;
@@ -58,8 +69,24 @@
             -ms-transform: rotate(45deg);
             transform: rotate(45deg);
         }
-        &:checked:before {
-            opacity: 1;
+
+    }
+    input[type="radio"] {
+        border-radius: 50%;
+        &:before {
+            -webkit-transition: opacity 0.2s linear;
+            transition: opacity 0.2s linear;
+            position: absolute;
+            top: 50%;
+            left: 2px;
+            display: block;
+            margin-top: -3px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #333;
+            content: '';
+            opacity: 0;
         }
     }
     textarea {
@@ -68,8 +95,26 @@
         border: 1px solid #9d9d9d;
         border-radius: 3px;
         white-space: nowrap;
-        &[disabled] {
-            background: #9d9d9d;
+    }
+    select {
+        width: 200px;
+        border-radius: 3px;
+        border: 1px solid #9d9d9d;
+        padding: 3px 15px 3px 6px;
+        position: relative;
+        z-index: 333;
+    }
+    .select-box {
+        position: relative;
+        &:after {
+            content: "▼";
+            position: absolute;
+            top: 2px;
+            left: 180px;
+            width: 5px;
+            height: 5px;
+            z-index: 332;
         }
     }
+
 }

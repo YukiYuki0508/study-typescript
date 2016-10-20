@@ -1,4 +1,5 @@
 "use strict";
+
 interface Options {
     checkbox: string;
     form: string;
@@ -11,10 +12,16 @@ export class ToggleDisable {
 
     constructor(private option: Options) {
         this.setContents();
+        this.setDisabled();
         this.handleEvents();
     }
 
     setContents(): any {
+        this.elements = [
+            "input:not([name='agree'])",
+            "textarea",
+            "select"
+        ];
         this.$checkbox = $(this.option.checkbox);
         this.$form = $(this.option.form);
     }
@@ -30,21 +37,13 @@ export class ToggleDisable {
         });
     }
 
-
-    addElement(element) {
-        this.elements.push(element);
-    }
-
     removeDisabled() {
-        // $("textarea, select").removeAttr("disabled");
-        // this.$form.find("input:not([name='agree']), textarea, select").removeAttr("disabled");
         this.elements.forEach(element => {
             this.$form.find(element).removeAttr("disabled");
         });
     }
 
     setDisabled() {
-        // $("input:not([name='agree']), textarea, select").attr("disabled","disabled");
         this.elements.forEach(element => {
             this.$form.find(element).attr("disabled","disabled");
         })
