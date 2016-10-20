@@ -1,29 +1,51 @@
 "use strict";
 
-export class ToggleDisable {
-    private $element;
+interface Options {
+    checkbox: string;
+    form: string;
+}
 
-    constructor(element) {
-        this.$element = $(element);
-        this.addDisable();
+export class ToggleDisable {
+    private $checkbox;
+    private $form;
+    private elements: string[] = [];
+
+    constructor(private option: Options) {
+        this.setContents();
+        this.setDisabled();
         this.handleEvents();
     }
 
+    setContents(): any {
+        this.elements = [
+            "input:not([name='agree'])",
+            "textarea",
+            "select"
+        ];
+        this.$checkbox = $(this.option.checkbox);
+        this.$form = $(this.option.form);
+    }
+
     handleEvents() {
-        this.$element.on("click", () => {
-            var isAgreed = this.$element.prop("checked");
+        this.$checkbox.on("click", () => {
+            var isAgreed = this.$checkbox.prop("checked");
             if(isAgreed) {
-                this.removeDisable();
+                this.removeDisabled();
             } else {
-                this.addDisable();
+                this.setDisabled();
             }
         });
     }
 
-    removeDisable() {
-        $("input:not([name='agree']), textarea, select").removeAttr("disabled");
+    removeDisabled() {
+        this.elements.forEach(element => {
+            this.$form.find(element).removeAttr("disabled");
+        });
     }
-    addDisable() {
-        $("input:not([name='agree']), textarea, select").attr("disabled","disabled");
+
+    setDisabled() {
+        this.elements.forEach(element => {
+            this.$form.find(element).attr("disabled","disabled");
+        })
     }
 }

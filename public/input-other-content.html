@@ -3,7 +3,7 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Study Typescript</title>
+  <title>Input Other Content</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no,address=no,email=no">
@@ -23,24 +23,43 @@
 <body>
   <div class="page-container">
     <header class="header">
-      <h1>Study Typescript</h1>
+      <h1>Input Other Content</h1>
     </header>
     <!-- /.header -->
     <main class="main">
       <div class="container">
-        <ul class="jump-each-page">
-          <li><a href="./scroll-top.html">Scroll Top</a></li>
-          <li><a href="./toggle-menu.html">Toggle Menu</a></li>
-          <li><a href="./tab.html">Tab</a></li>
-          <li><a href="./agree.html">Input Control(Form)</a></li>
-          <li><a href="./input-other-content.html">Input Other Content(Form)</a></li>
-        </ul>
+        <form action="" class="form-other">
+          <table class="form-table form-table--other">
+            <tbody>
+              <tr>
+                <th>
+                  職業
+                  <span class="t-red t-bold">［必須］</span>
+                </th>
+                <td>
+                  <input type="radio" name="job" value="会社員" id="radio-0">
+                  <label for="radio-0">会社員</label>
+                  <input type="radio" name="job" value="学生" id="radio-1">
+                  <label for="radio-1">学生</label>
+                  <input type="radio" name="job" value="主婦" id="radio-2">
+                  <label for="radio-2">主婦</label>
+                  <input type="radio" name="job" value="その他" id="radio-other">
+                  <label for="radio-other"> その他</label>
+                  <input type="text" name="job_other" id="job-other" disabled="disabled">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
       </div>
       <!-- /.container -->
     </main>
     <!-- /.main -->
     <footer class="footer">
-
+      <div class="breadcrumb">
+        <p><a href="./index.html">Topページ</a> > Input Other Content(Form)</p>
+      </div>
+      <!-- /.breadcrumb -->
     </footer>
     <!-- /.footer -->
   </div>

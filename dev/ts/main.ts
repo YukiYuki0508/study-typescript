@@ -41,5 +41,10 @@ $(function() {
 import  { ToggleDisable } from "./agree";
 
 $(function() {
-    new ToggleDisable('#agree');
+    let options = {
+        checkbox: "#agree",
+        form: ".form-agree",
+    };
+
+    new ToggleDisable(options);
 });
