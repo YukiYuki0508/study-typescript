@@ -41,5 +41,16 @@ $(function() {
 import  { ToggleDisable } from "./agree";
 
 $(function() {
-    new ToggleDisable('#agree');
+    let options = {
+        checkbox: "#agree",
+        form: ".form-agree",
+    };
+
+    let toggleDisable = new ToggleDisable(options);
+
+    toggleDisable.addElement('input:not([name="agree"])');
+    toggleDisable.addElement('textarea');
+    toggleDisable.addElement('select');
+
+    toggleDisable.setDisabled();
 });
