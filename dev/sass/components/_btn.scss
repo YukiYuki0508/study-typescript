@@ -26,8 +26,11 @@
         bottom: auto;
         cursor: pointer;
         width: 140px;
-        left: 100px;
+        left: 10px;
         text-align: center;
+        @include respond-to(small) {
+            left: 100px;
+        }
     }
 }
 .hide-btn {
