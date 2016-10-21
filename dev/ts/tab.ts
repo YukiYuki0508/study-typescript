@@ -20,7 +20,6 @@ export class Tab {
     handleEvents() {
         $(this.option.tabs).on("click", (e: any) => {
             this.changeTab(e); // e: イベントオブジェクト。イベントに関わるさまざまな情報を管理するためのもの
-            console.log(e);
             return false;
         });
     }
