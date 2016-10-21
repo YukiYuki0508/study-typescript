@@ -1,8 +1,0 @@
-@charset "utf-8";
-
-.main--scroll-top {
-    height: 1000px;
-    @include respond-to(small) {
-        height: 1500px;
-    }
-}
