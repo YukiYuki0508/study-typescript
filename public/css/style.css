@@ -515,6 +515,19 @@ html, body {
     outline: none; }
     .form-table input[disabled], .form-table button[disabled], .form-table textarea[disabled], .form-table select[disabled] {
       background: rgba(0, 0, 0, 0.3); }
+  .form-table input[type="text"] {
+    width: 80px;
+    height: 20px;
+    display: inline-block;
+    margin-left: 5px;
+    border: 1px solid #9d9d9d;
+    cursor: pointer;
+    vertical-align: middle;
+    box-shadow: 0 0 0 3px #cdcdcd; }
+    .form-table input[type="text"][disabled] {
+      background: transparent;
+      cursor: auto;
+      box-shadow: none; }
   .form-table input[type="checkbox"], .form-table input[type="radio"] {
     border: 1px solid #9d9d9d;
     width: 12px;

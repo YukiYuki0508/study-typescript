@@ -48,3 +48,16 @@ $(function() {
 
     new ToggleDisable(options);
 });
+
+
+import  { AdditionalText } from "./input-other-content";
+
+$(function() {
+    let options = {
+        commonName: "[name='job']",
+        textName: "[name='job-other']",
+        otherNum: 3,
+    };
+
+    new AdditionalText(options);
+});
