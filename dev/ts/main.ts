@@ -44,6 +44,11 @@ $(function() {
     let options = {
         checkbox: "#agree",
         form: ".form-agree",
+        parts: [
+            "input:not([name='agree'])",
+            "textarea",
+            "select"
+        ],
     };
 
     new ToggleDisable(options);

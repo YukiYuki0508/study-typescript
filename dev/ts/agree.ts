@@ -3,6 +3,7 @@
 interface Options {
     checkbox: string;
     form: string;
+    parts: string[];
 }
 
 export class ToggleDisable {
@@ -17,11 +18,7 @@ export class ToggleDisable {
     }
 
     setContents(): any {
-        this.elements = [
-            "input:not([name='agree'])",
-            "textarea",
-            "select"
-        ];
+        this.elements = this.option.parts;
         this.$checkbox = $(this.option.checkbox);
         this.$form = $(this.option.form);
     }
