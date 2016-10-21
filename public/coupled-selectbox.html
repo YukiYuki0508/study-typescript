@@ -3,7 +3,7 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Control Input Additional Content</title>
+  <title>Coupled SelectBox</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no,address=no,email=no">
@@ -23,7 +23,7 @@
 <body>
   <div class="page-container">
     <header class="header">
-      <h1>Control Input Additional Content</h1>
+      <h1>Coupled SelectBox</h1>
     </header>
     <!-- /.header -->
     <main class="main">
@@ -33,19 +33,31 @@
             <tbody>
               <tr>
                 <th>
-                  職業
+                  好きな食べ物
                   <span class="t-red t-bold">［必須］</span>
                 </th>
                 <td>
-                  <input type="radio" name="job" value="会社員" id="radio-0">
-                  <label for="radio-0">会社員</label>
-                  <input type="radio" name="job" value="学生" id="radio-1">
-                  <label for="radio-1">学生</label>
-                  <input type="radio" name="job" value="主婦" id="radio-2">
-                  <label for="radio-2">主婦</label>
-                  <input type="radio" name="job" value="その他" id="radio-other">
-                  <label for="job-other"> その他</label>
-                  <input type="text" name="job-other" id="job-other" disabled="disabled">
+                  <div class="select-box select-box--first">
+                    <select name="large-category" id="large-category">
+                      <option value="" selected class="message">大分類を選択してください</option>
+                      <option value="肉" class="meat">肉</option>
+                      <option value="果物" class="fruit">果物</option>
+                      <option value="その他" class="other">その他</option>
+                    </select>
+                  </div>
+                  <div class="select-box">
+                    <select name="medium-category" id="medium-category">
+                      <option value="" selected class="message">中分類を選択してください</option>
+                      <option value="牛肉" class="meat">牛肉</option>
+                      <option value="豚肉" class="meat">豚肉</option>
+                      <option value="鶏肉" class="meat">鶏肉</option>
+                      <option value="その他" class="meat">その他</option>
+                      <option value="りんご" class="fruit">りんご</option>
+                      <option value="みかん" class="fruit">みかん</option>
+                      <option value="バナナ" class="fruit">バナナ</option>
+                      <option value="その他" class="fruit">その他</option>
+                    </select>
+                  </div>
                 </td>
               </tr>
             </tbody>
@@ -57,7 +69,7 @@
     <!-- /.main -->
     <footer class="footer">
       <div class="breadcrumb">
-        <p><a href="./index.html">Topページ</a> > Control Input Additional Content(Form)</p>
+        <p><a href="./index.html">Topページ</a> > Coupled SelectBox(Form)</p>
       </div>
       <!-- /.breadcrumb -->
     </footer>

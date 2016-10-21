@@ -66,3 +66,16 @@ $(function() {
 
     new AdditionalText(options);
 });
+
+
+import  { CoupledSelectBox } from "./coupled-selectbox";
+
+$(function() {
+    let options = {
+        firstSelectName: "select[name='large-category']",
+        secondSelectName: "select[name='medium-category']",
+        titleSelectClass: "message",
+    };
+
+    new CoupledSelectBox(options);
+});

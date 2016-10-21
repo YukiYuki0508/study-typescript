@@ -591,6 +591,8 @@ html, body {
     z-index: 333; }
   .form-table .select-box {
     position: relative; }
+    .form-table .select-box--first {
+      margin-bottom: 10px; }
     .form-table .select-box:after {
       content: "▼";
       position: absolute;

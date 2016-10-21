@@ -121,6 +121,9 @@
     }
     .select-box {
         position: relative;
+        &--first {
+            margin-bottom: 10px;
+        }
         &:after {
             content: "▼";
             position: absolute;
