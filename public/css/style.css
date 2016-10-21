@@ -302,28 +302,6 @@ html {
   color: #333;
   text-align: center; }
 
-.main--scroll-top {
-  height: 1000px; }
-  @media print, screen and (min-width: 768px) {
-    .main--scroll-top {
-      height: 1500px; } }
-
-.btn {
-  background: #ccc;
-  color: #333;
-  padding: 10px 20px;
-  border: 1px solid #333;
-  display: inline-block;
-  position: fixed;
-  right: 20px;
-  bottom: 10px;
-  transition: all 0.3s ease-in-out; }
-  .btn :hover {
-    opacity: 0.66; }
-
-.hide-btn {
-  opacity: 0; }
-
 .clearfix:before, .clearfix:after {
   content: '';
   display: table; }
