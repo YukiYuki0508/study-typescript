@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Input Control</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no,address=no,email=no">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image:src" content="">
+  <link rel="icon" href="#">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="page-container">
+    <header class="header">
+      <h1>Input Control</h1>
+    </header>
+    <!-- /.header -->
+    <main class="main">
+      <div class="container">
+        <form action="" class="form-agree">
+          <table class="form-table form-table--agree">
+            <tbody>
+              <tr>
+                <th>
+                  個人情報の取り扱いについて
+                  <br>
+                  <span class="t-red t-bold">［必須］</span>
+                </th>
+                <td>
+                  個人情報の取り扱いについてご同意をいただければ、下記の「同意する」にチェックを入れてください。
+                  <br>
+                  <input type="checkbox" name="agree" id="agree" value="同意する">
+                  <label for="agree">同意する</label>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  性別
+                  <span class="t-red t-bold">［必須］</span>
+                </th>
+                <td>
+                  <input type="radio" name="sex" value="男" id="man">
+                  <label for="man">男</label>
+                  <input type="radio" name="sex" value="女" id="woman">
+                  <label for="woman">女</label>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  ご年齢
+                  <span class="t-red t-bold">［必須］</span>
+                </th>
+                <td>
+                  <div class="select-box">
+                    <select name="age" id="age">
+                      <option value="" selected>年代を選択してください</option>
+                      <option value="〜10代">〜10代</option>
+                      <option value="20代">20代</option>
+                      <option value="30代">30代</option>
+                      <option value="40代">40代</option>
+                      <option value="50代">50代</option>
+                      <option value="60代">60代</option>
+                      <option value="70代">70代</option>
+                      <option value="80代〜">80代</option>
+                    </select>
+                  </div>
+                  <!-- /.select-box -->
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  ご要望
+                  <span class="t-red t-bold">［必須］</span>
+                </th>
+                <td>
+                  <textarea name="comment" id="comment"></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+      <!-- /.container -->
+    </main>
+    <!-- /.main -->
+    <footer class="footer">
+      <div class="breadcrumb">
+        <p><a href="./index.html">Topページ</a> > Input Control(Form)</p>
+      </div>
+      <!-- /.breadcrumb -->
+    </footer>
+    <!-- /.footer -->
+  </div>
+  <!-- /.page-container -->
+  <script src="js/bundle.js"></script>
+</body>
+</html>

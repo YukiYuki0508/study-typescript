@@ -8,9 +8,29 @@
     position: fixed;
     right: 20px;
     bottom: 10px;
+    z-index: 9997;
     transition: all 0.3s ease-in-out;
     :hover {
         opacity: 0.66;
+    }
+    &--open-menu {
+        top: 50px;
+        bottom: auto;
+        cursor: pointer;
+        width: 140px;
+        text-align: center;
+    }
+    &--close-menu {
+        position: relative;
+        top: 20px;
+        bottom: auto;
+        cursor: pointer;
+        width: 140px;
+        left: 10px;
+        text-align: center;
+        @include respond-to(small) {
+            left: 100px;
+        }
     }
 }
 .hide-btn {

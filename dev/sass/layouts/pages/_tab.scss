@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+.tab-menu {
+    width: 300px;
+    margin: 0 auto;
+    font-size: 0;
+    @include respond-to(small) {
+        width: 600px;
+    }
+    li {
+        width: (300/3) * 1px;
+        line-height: 60px;
+        display: inline-block;
+        font-size: 1.4rem;
+        text-align: center;
+        background: #8c8c8c;
+        box-sizing: border-box;
+        border: 3px solid #333;
+        @include respond-to(small) {
+            width: (600/3) * 1px;
+        }
+        &:first-child, &:nth-child(2) {
+            border-right: none;
+        }
+        &.selected {
+            background: #333;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+            color: #fff;
+            &:hover {
+                background: #333;
+            }
+        }
+    }
+}
+.tab-contents {
+    width: 300px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 3px solid #333;
+    border-top: none;
+    height: 100px;
+    text-align: center;
+    padding: 20px 0;
+    @include respond-to(small) {
+        width: 600px;
+    }
+    &.hide-tab {
+        display: none;
+    }
+}

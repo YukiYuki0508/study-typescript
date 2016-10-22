@@ -32,15 +32,18 @@
 @import "layouts/footer";
 @import "layouts/main";
 @import "layouts/aside";
+@import "layouts/nav";
 //------------------------------
 // @: Pages Layouts
 //------------------------------
 @import "layouts/pages/home";
 @import "layouts/pages/scroll-top";
+@import "layouts/pages/tab";
 //------------------------------
 // @: Components
 //------------------------------
 @import "components/btn";
+@import "components/form";
 //------------------------------
 // @: Utility
 //------------------------------

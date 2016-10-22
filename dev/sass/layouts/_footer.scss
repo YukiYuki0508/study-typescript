@@ -1,6 +1,23 @@
 @charset "utf-8";
 
 .footer {
-    @include respond-to(small) {
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #ddd;
+}
+.breadcrumb {
+    color: #333;
+    text-align: center;
+    p {
+        line-height: 30px;
+        a {
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                text-decoration: none;
+                opacity: 0.66;
+            }
+        }
     }
 }

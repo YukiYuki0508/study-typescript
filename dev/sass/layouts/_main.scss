@@ -1,6 +1,55 @@
 @charset "utf-8";
 
-main {
+html, body{
+   height: 100%;
+ }
+.page-container{
+  width: 100%;
+  position: relative;
+  height: auto !important; /*IE6対策*/
+  height: 100%; /*IE6対策*/
+  min-height: 100%;
+}
+
+.main {
+  padding-bottom: 30px;
+}
+
+.container {
+  padding: 0 10px;
+  max-width: 1260px;
+  margin: 0 auto;
   @include respond-to(small) {
+    padding: 0 20px;
+  }
+  h2 {
+    color: #333;
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+}
+
+.section {
+  margin-top: -60px;
+  padding-top: 60px;
+  margin-bottom: 30px;
+}
+
+.jump-each-page {
+  margin-top: 20px;
+  margin-left: 20px;
+  li {
+    font-size: 2.0rem;
+    line-height: 2;
+    color: #333;
+    list-style-type: circle;
+    a {
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        opacity: 0.66;
+        text-decoration: none;
+      }
+    }
   }
 }
