@@ -296,11 +296,13 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-.header h1 {
-  font-size: 2.4rem;
-  font-weight: bold;
-  color: #333;
-  text-align: center; }
+.header {
+  margin-top: 15px; }
+  .header h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center; }
 
 .footer {
   height: 30px;
@@ -335,18 +337,11 @@ html, body {
 .main {
   padding-bottom: 30px; }
 
-.container {
-  padding: 0 10px;
-  max-width: 1260px;
-  margin: 0 auto; }
-  @media print, screen and (min-width: 768px) {
-    .container {
-      padding: 0 20px; } }
-  .container h2 {
-    color: #333;
-    font-size: 2.4rem;
-    font-weight: bold;
-    margin-bottom: 20px; }
+h2 {
+  color: #333;
+  font-size: 2.0rem;
+  font-weight: bold;
+  margin-bottom: 20px; }
 
 .section {
   margin-top: -60px;
@@ -354,13 +349,13 @@ html, body {
   margin-bottom: 30px; }
 
 .jump-each-page {
-  margin-top: 20px;
-  margin-left: 20px; }
+  margin-top: 20px; }
   .jump-each-page li {
-    font-size: 2.0rem;
+    font-size: 1.6rem;
     line-height: 2;
     color: #333;
-    list-style-type: circle; }
+    list-style-type: circle;
+    margin-left: 12px; }
     .jump-each-page li a {
       transition: all 0.3s ease-in-out; }
       .jump-each-page li a:hover {
@@ -490,11 +485,7 @@ html, body {
   opacity: 0; }
 
 .form-table {
-  margin: 20px auto 0;
-  width: 300px; }
-  @media print, screen and (min-width: 768px) {
-    .form-table {
-      width: 600px; } }
+  margin-top: 20px; }
   .form-table th, .form-table td {
     border: 1px solid #ccc;
     padding: 8px; }

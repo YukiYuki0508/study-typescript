@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="">
   <meta name="twitter:image:src" content="">
   <link rel="icon" href="#">
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -28,16 +29,22 @@
     <!-- /.header -->
     <main class="main">
       <div class="container">
-        <ul class="tab-menu">
-          <li class="selected"><a href="#">Menu1</a></li>
-          <li><a href="#">Menu2</a></li>
-          <li><a href="#">Menu3</a></li>
-        </ul>
-        <ul>
-          <li class="tab-contents">タブボックス1</li>
-          <li class="tab-contents hide-tab">タブボックス2</li>
-          <li class="tab-contents hide-tab">タブボックス3</li>
-        </ul>
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+            <ul class="tab-menu">
+              <li class="selected"><a href="#">Menu1</a></li>
+              <li><a href="#">Menu2</a></li>
+              <li><a href="#">Menu3</a></li>
+            </ul>
+            <ul>
+              <li class="tab-contents">タブボックス1</li>
+              <li class="tab-contents hide-tab">タブボックス2</li>
+              <li class="tab-contents hide-tab">タブボックス3</li>
+            </ul>
+          </div>
+          <!-- /.col-xs-offset-10 col-md-0ffset-8 -->
+        </div>
+        <!-- /.row -->
       </div>
       <!-- /.container -->
     </main>

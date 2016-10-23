@@ -1,11 +1,8 @@
 @charset "utf-8";
 
 .form-table {
-    margin: 20px auto 0;
-    width: 300px;
-    @include respond-to(small) {
-        width: 600px;
-    }
+    margin-top: 20px;
+
     th, td {
         border: 1px solid #ccc;
         padding: 8px;
