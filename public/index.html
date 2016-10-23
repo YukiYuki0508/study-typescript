@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="">
   <meta name="twitter:image:src" content="">
   <link rel="icon" href="#">
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -28,14 +29,17 @@
     <!-- /.header -->
     <main class="main">
       <div class="container">
-        <ul class="jump-each-page">
-          <li><a href="./scroll-top.html">Scroll Top</a></li>
-          <li><a href="./toggle-menu.html">Toggle Menu</a></li>
-          <li><a href="./tab.html">Tab</a></li>
-          <li><a href="./agree.html">Input Control(Form)</a></li>
-          <li><a href="./input-other-content.html">Control Input Additional Content(Form)</a></li>
-          <li><a href="./coupled-selectbox.html">Coupled SelectBox(Form)</a></li>
-        </ul>
+        <div class="row">
+          <ul class="jump-each-page col-xs-12 col-md-6">
+            <li><a href="./scroll-top.html">Scroll Top<br>~ページトップに戻る~</a></li>
+            <li><a href="./toggle-menu.html">Toggle Menu</a>~ページメニューの開閉~</li>
+            <li><a href="./tab.html">Tab~タブメニュー~</a></li>
+            <li><a href="./agree.html">Input Control(Form)~「同意」ボタンをチェックしないと入力できない~</a></li>
+            <li><a href="./input-other-content.html">Control Input Additional Content(Form)~特定の時だけテキストが入力できる~</a></li>
+            <li><a href="./coupled-selectbox.html">Coupled SelectBox(Form)~相関しているセレクトボックス~</a></li>
+          </ul>
+        </div>
+        <!-- /.row -->
       </div>
       <!-- /.container -->
     </main>

@@ -39,9 +39,9 @@ class ScrollTop {
         let windowWidth = this.getWindowWidth();
 
         if( windowWidth < this.switchWindowWidth ) {
-            return 300;
+            return 50;
         } else {
-            return 600;
+            return 100;
         }
     }
 
