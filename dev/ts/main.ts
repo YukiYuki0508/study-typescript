@@ -93,3 +93,13 @@ $(function() {
 
     new FadeInLead(options);
 });
+
+import { ImgChange } from "./img-change";
+
+$(function() {
+    let options = {
+        imgContainer: ".imgContainer",
+    };
+
+    new ImgChange(options);
+});

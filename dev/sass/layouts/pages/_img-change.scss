@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+.imgContainer {
+    position: relative;
+    cursor: pointer;
+    img {
+        margin: 0 auto;
+    }
+    .img−click {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+    }
+    .imgTransition {
+        position: relative;
+        transition: all 0.3s ease-in;
+        z-index: 3;
+        &.fadeOut {
+            opacity: 0 !important;
+        }
+        &.fadeIn {
+            opacity: 1 !important;
+        }
+    }
+}

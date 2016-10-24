@@ -459,6 +459,26 @@ h2 {
     line-height: 2;
     opacity: 0; }
 
+.imgContainer {
+  position: relative;
+  cursor: pointer; }
+  .imgContainer img {
+    margin: 0 auto; }
+  .imgContainer .img−click {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2; }
+  .imgContainer .imgTransition {
+    position: relative;
+    transition: all 0.3s ease-in;
+    z-index: 3; }
+    .imgContainer .imgTransition.fadeOut {
+      opacity: 0 !important; }
+    .imgContainer .imgTransition.fadeIn {
+      opacity: 1 !important; }
+
 .btn {
   background: #ccc;
   color: #333;
