@@ -103,3 +103,14 @@ $(function() {
 
     new ImgChange(options);
 });
+
+
+import { SwitchImg } from "./switch-img";
+
+$(function() {
+    let options = {
+        switchWidth: 768,
+    };
+
+    new SwitchImg(options);
+});
