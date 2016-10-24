@@ -79,3 +79,17 @@ $(function() {
 
     new CoupledSelectBox(options);
 });
+
+import { FadeInLead } from "./fadein-lead";
+
+$(function() {
+    let options = {
+        lead: ".fadein-lead p",
+        leadNumber: 3,
+        startSpeed: 1000,
+        delaySpeed: 2500,
+        fadeSpeed: 1000,
+    };
+
+    new FadeInLead(options);
+});

@@ -450,6 +450,15 @@ h2 {
   .tab-contents.hide-tab {
     display: none; }
 
+.fadein-lead {
+  margin-top: 20px; }
+  .fadein-lead p {
+    text-align: center;
+    color: #333;
+    font-size: 1.6rem;
+    line-height: 2;
+    opacity: 0; }
+
 .btn {
   background: #ccc;
   color: #333;
