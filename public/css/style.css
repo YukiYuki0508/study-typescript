@@ -473,7 +473,8 @@ h2 {
   .imgContainer .imgTransition {
     position: relative;
     transition: all 0.3s ease-in;
-    z-index: 3; }
+    z-index: 3;
+    opacity: 0; }
     .imgContainer .imgTransition.fadeOut {
       opacity: 0 !important; }
     .imgContainer .imgTransition.fadeIn {
