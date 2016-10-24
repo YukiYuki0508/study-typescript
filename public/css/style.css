@@ -362,6 +362,9 @@ h2 {
         opacity: 0.66;
         text-decoration: none; }
 
+.img-center {
+  margin: 0 auto; }
+
 .nav {
   position: fixed;
   z-index: 9999;
@@ -462,8 +465,6 @@ h2 {
 .imgContainer {
   position: relative;
   cursor: pointer; }
-  .imgContainer img {
-    margin: 0 auto; }
   .imgContainer .img−click {
     position: absolute;
     top: 0;
