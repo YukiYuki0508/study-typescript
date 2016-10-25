@@ -114,3 +114,15 @@ $(function() {
 
     new SwitchImg(options);
 });
+
+import { ToggleImg } from "./toggle-img";
+
+$(function() {
+    let options = {
+        imgContainer: ".imgContainer",
+        beforeImg: ".img-before",
+        afterImg: ".img-after",
+    };
+
+    new ToggleImg(options);
+});

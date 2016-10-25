@@ -313,7 +313,8 @@ html {
 
 .breadcrumb {
   color: #333;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 0 !important; }
   .breadcrumb p {
     line-height: 30px; }
     .breadcrumb p a {
@@ -344,8 +345,6 @@ h2 {
   margin-bottom: 20px; }
 
 .section {
-  margin-top: -60px;
-  padding-top: 60px;
   margin-bottom: 30px; }
 
 .jump-each-page {
@@ -364,6 +363,10 @@ h2 {
 
 .img-center {
   margin: 0 auto; }
+
+.imgContainer {
+  position: relative;
+  cursor: pointer; }
 
 .nav {
   position: fixed;
@@ -462,24 +465,34 @@ h2 {
     line-height: 2;
     opacity: 0; }
 
-.imgContainer {
+.imgContainer .img−click {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2; }
+
+.imgContainer .imgTransition {
   position: relative;
-  cursor: pointer; }
-  .imgContainer .img−click {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2; }
-  .imgContainer .imgTransition {
-    position: relative;
-    transition: all 0.3s ease-in;
-    z-index: 3;
-    opacity: 0; }
-    .imgContainer .imgTransition.fadeOut {
-      opacity: 0 !important; }
-    .imgContainer .imgTransition.fadeIn {
-      opacity: 1 !important; }
+  transition: all 0.3s ease-in;
+  z-index: 3;
+  opacity: 0; }
+  .imgContainer .imgTransition.fadeOut {
+    opacity: 0 !important; }
+  .imgContainer .imgTransition.fadeIn {
+    opacity: 1 !important; }
+
+.imgContainer .img-before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2; }
+
+.imgContainer .img-after {
+  position: relative;
+  transition: all 0.3s ease-in;
+  z-index: 3; }
 
 .btn {
   background: #ccc;
