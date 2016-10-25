@@ -94,14 +94,14 @@ $(function() {
     new FadeInLead(options);
 });
 
-import { ImgChange } from "./img-change";
+import { OverImg } from "./over-img";
 
 $(function() {
     let options = {
         imgContainer: ".imgContainer",
     };
 
-    new ImgChange(options);
+    new OverImg(options);
 });
 
 

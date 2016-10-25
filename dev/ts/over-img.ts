@@ -3,7 +3,7 @@ interface Options {
     imgContainer: string;
 }
 
-export class ImgChange {
+export class OverImg {
     $imgContainer: JQuery;
 
     constructor(private option: Options) {
@@ -17,11 +17,11 @@ export class ImgChange {
 
     handleEvents() {
         this.$imgContainer.on("click", (e: any) => {
-            this.imgChange(e);
+            this.overImg(e);
         });
     }
 
-    imgChange(event) {
+    overImg(event) {
         if ($(event.currentTarget).find(".imgTransition").hasClass("fadeOut")) {
             $(event.currentTarget).find(".imgTransition").removeClass("fadeOut");
             $(event.currentTarget).find(".imgTransition").addClass("fadeIn");
