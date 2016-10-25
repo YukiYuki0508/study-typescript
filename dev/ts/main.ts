@@ -126,3 +126,14 @@ $(function() {
 
     new ToggleImg(options);
 });
+
+import { AppearBlowing } from "./appear-blowing";
+
+$(function() {
+    let options = {
+        clickContent: ".hover-img",
+        hoverContent: ".appear-img",
+    };
+
+    new AppearBlowing(options);
+});
