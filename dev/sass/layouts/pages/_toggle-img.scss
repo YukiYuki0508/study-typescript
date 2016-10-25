@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.imgContainer {
+    .img-before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+    }
+    .img-after {
+        position: relative;
+        transition: all 0.3s ease-in;
+        z-index: 3;
+    }
+}
