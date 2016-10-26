@@ -500,6 +500,23 @@ h2 {
 .appear-img {
   display: none; }
 
+.img-fadein-fadeout-container {
+  position: relative;
+  height: 600px; }
+  .img-fadein-fadeout-container img {
+    position: absolute;
+    max-width: 30%;
+    display: none; }
+    .img-fadein-fadeout-container img:first-child {
+      top: 0;
+      right: 0; }
+    .img-fadein-fadeout-container img:nth-child(2) {
+      top: 200px;
+      left: 35%; }
+    .img-fadein-fadeout-container img:last-child {
+      top: 400px;
+      left: 0; }
+
 .btn {
   background: #ccc;
   color: #333;
