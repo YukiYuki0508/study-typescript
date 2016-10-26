@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+.img-fadein-fadeout-container {
+    position: relative;
+    height: 600px;
+    img {
+        position: absolute;
+        max-width: 30%;
+        display: none;
+        &:first-child {
+            top: 0;
+            right: 0;
+        }
+        &:nth-child(2) {
+            top: 200px;
+            left: 35%;
+        }
+        &:last-child {
+            top: 400px;
+            left: 0;
+        }
+    }
+}

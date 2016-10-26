@@ -137,3 +137,17 @@ $(function() {
 
     new AppearBlowing(options);
 });
+
+import { FadeinFadeout } from "./fadein-fadeout";
+
+$(function() {
+    let options = {
+        toggleContent: ".img-fadein-fadeout-container",
+        contentNumber: 3,
+        fadeinSpeed: 500,
+        fadeoutSpeed: 1500,
+        deltaSpeed: 1500,
+    };
+
+    new FadeinFadeout(options);
+});
