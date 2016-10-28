@@ -15,7 +15,6 @@ html, body{
   padding-bottom: 30px;
 }
 
-
 h2 {
   color: #333;
   font-size: 2.0rem;
@@ -54,4 +53,11 @@ h2 {
 .imgContainer {
   position: relative;
   cursor: pointer;
+}
+
+.only-sp {
+  display: block;
+  @include respond-to(small) {
+    display: none;
+  }
 }
