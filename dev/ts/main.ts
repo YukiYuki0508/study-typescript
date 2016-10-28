@@ -152,7 +152,7 @@ $(function() {
     new FadeinFadeout(options);
 });
 
-import { ShiftMenu } from "./shift-menu";
+import { ChangeMenu } from "./change-menu";
 
 $(function() {
     let options = {
@@ -161,5 +161,5 @@ $(function() {
         navBtn: ".onlySpMenu",
     };
 
-    new ShiftMenu(options);
+    new ChangeMenu(options);
 });

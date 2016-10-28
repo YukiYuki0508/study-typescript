@@ -6,7 +6,7 @@ interface Options {
     navBtn: string;
 }
 
-export class ShiftMenu {
+export class ChangeMenu {
     $header: JQuery;
     $nav: JQuery;
     $navBtn: JQuery;
@@ -25,12 +25,12 @@ export class ShiftMenu {
             this.$nav.addClass("openMenu");
         }
     }
+
     setContents() {
         this.$header = $(this.option.header);
         this.$nav = $(this.option.nav);
         this.$navBtn = $(this.option.navBtn);
         this.headerHeight = $(this.option.header).height();
-
     }
 
     handleEvents() {
@@ -38,7 +38,7 @@ export class ShiftMenu {
             this.getWindowWidth();
             this.getWindowHeight();
             this.reset();
-            this.switchNav();
+            this.changeNav();
         });
 
         this.$navBtn.on('click', () => {
@@ -48,44 +48,43 @@ export class ShiftMenu {
 
     getWindowWidth() {
         this.windowWidth = $(window).width();
-        return;
     }
 
     getWindowHeight() {
         this.windowHeight = $(window).height();
-        return;
     }
 
-    switchNav() {
-        if(this.windowWidth < 768) {
-            this.$nav.css({
-                display: "none",
-                position: "fixed",
-                top: "0",
-                left: "0",
-                "z-index": "100000",
-                height: this.windowHeight + "px",
-            });
+    changeNav() {
+        let smpStyle = {
+            display: "none",
+            position: "fixed",
+            top: "0",
+            left: "0",
+            "z-index": "9998",
+            height: this.windowHeight + "px",
+        };
+        let pcStyle = {
+            position: "relative",
+            display: "inline-block",
+            height: (this.headerHeight / 2 ) + "px",
+        };
 
-        } else {
-            this.$nav.css({
-                position: "relative",
-                display: "inline-block",
-                height: (this.headerHeight / 2 ) + "px",
-            });
-        }
+        this.$nav.css(this.windowWidth < 768 ? smpStyle : pcStyle)
     }
 
     toggleNav() {
-        if(this.windowWidth < 768) {
-            if(this.$nav.hasClass("openMenu")) {
-                this.$nav.css({display: "block"});
-                this.$nav.removeClass("openMenu");
-            } else {
-                this.$nav.css({display: "none"});
-                this.$nav.removeClass("openMenu");
-                this.$nav.addClass("openMenu");
-            }
+        if(this.windowWidth >= 768) { // pcの部分は除去する
+            return;
+        }
+
+        if(this.$nav.hasClass("openMenu")) {
+            this.$nav.css({display: "block"});
+            this.$nav.removeClass("openMenu");
+        } else {
+            this.$nav.css({display: "none"});
+            this.$nav.removeClass("openMenu");
+            this.$nav.addClass("openMenu");
         }
     }
+
 }
