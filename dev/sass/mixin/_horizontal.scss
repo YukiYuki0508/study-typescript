@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+@mixin horizontal-wrapper() {
+    letter-spacing: -0.4em;
+    word-spacing: -0.1em;
+}
+@mixin horizontal() {
+    display: inline-block;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
