@@ -9,7 +9,7 @@ import { ToggleMenu } from "./toggleMenu";
 
 $(function() {
     let options = {
-        nav: ".nav",
+        nav: ".nav--toggle",
         btnOpen: ".open-menu",
         btnClose: ".close-menu",
     };
@@ -150,4 +150,16 @@ $(function() {
     };
 
     new FadeinFadeout(options);
+});
+
+import { ShiftMenu } from "./shift-menu";
+
+$(function() {
+    let options = {
+        header: ".header--with-nav",
+        nav: ".nav--with-header",
+        navBtn: ".onlySpMenu",
+    };
+
+    new ShiftMenu(options);
 });

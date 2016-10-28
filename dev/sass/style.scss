@@ -17,6 +17,7 @@
 //------------------------------
 @import "mixin/respond-to";
 @import "mixin/hide-text";
+@import "mixin/horizontal";
 //------------------------------
 // @: Generics
 //------------------------------
@@ -44,6 +45,8 @@
 @import "layouts/pages/toggle-img";
 @import "layouts/pages/appear-blowing";
 @import "layouts/pages/fadein-fadeout";
+@import "layouts/pages/shift-nav";
+@import "layouts/pages/toggle-menu";
 //------------------------------
 // @: Components
 //------------------------------
