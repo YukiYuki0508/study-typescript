@@ -163,3 +163,14 @@ $(function() {
 
     new ChangeMenu(options);
 });
+
+import { AppearSubMenu } from "./appear-sub-menu";
+
+$(function() {
+    let options = {
+        mainMenu: ".nav__menu--with-submenu",
+        header: ".nav--with-header-with-submenu",
+    };
+
+    new AppearSubMenu(options);
+});

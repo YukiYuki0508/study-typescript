@@ -1,0 +1,39 @@
+@charset "utf-8";
+.header--with-nav {
+    .nav--with-header-with-submenu {
+        .nav__menu--with-submenu {
+            height: 100%;
+            > li {
+                position: relative;
+                padding-top: inherit;
+                padding-bottom: inherit;
+                font-size: 1.6rem;
+                > ul {
+                    display: block;
+                    @include respond-to(small) {
+                        display: none;
+                        position: absolute;
+                        text-align: center;
+                        background: rgba(133, 133, 133, 0.5);
+                        left: 0;
+                    }
+                    > li {
+                        padding-left: 20px;
+                        @include respond-to(small) {
+                            padding: 8px 4px;
+                        }
+                        > a {
+                            display: block;
+                            transition: all 0.3s ease-in-out;
+                            &:hover {
+                                text-decoration: none;
+                                opacity: 0.66;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
