@@ -3,7 +3,7 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Change Menu</title>
+  <title>Appear Sub Menu</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no,address=no,email=no">
@@ -24,10 +24,10 @@
 <body>
   <div class="page-container">
 
-    <header class="header header--with-nav">
+    <header class="header header--with-nav nav--with-header-with-submenu">
       <div class="header__upper">
-        <h1 class="header__ttl header__ttl--with-nav">Change
-          <br class="only-sp">Menu</h1>
+        <h1 class="header__ttl header__ttl--with-nav">Appear
+          <br class="only-sp">Sub Menu</h1>
         <!-- /.header__ttl -->
         <div class="header-nav-toggle onlySpMenu">
           <div class="header__open-menu btn btn--open-menu">
@@ -36,26 +36,33 @@
         </div>
       </div>
       <!-- /.header__upper -->
-      <nav class="nav nav--with-header">
-        <ul class="nav__menu">
+      <nav class="nav nav--with-header nav--with-header-with-submenu">
+        <ul class="nav__menu nav__menu--with-submenu">
           <li><a href="">ダミーメニュー1</a></li>
-          <li><a href="">ダミーメニュー2</a></li>
+          <li>
+            ダミーメニュー2
+            <ul>
+              <li><a href="">メニュー2-1</a></li>
+              <li><a href="">メニュー2-2</a></li>
+            </ul>
+          </li>
           <li><a href="">ダミーメニュー3</a></li>
         </ul>
-        <!-- /.nav__menu -->
+        <!-- /.nav__menu nav__menu--with-submenu -->
       </nav>
       <!-- /.nav nav--with-header -->
     </header>
     <!-- /.header header--with-nav -->
-    <main class="main main--with-fixed-menu">
+    <main class="main">
       <div class="container">
+
       </div>
       <!-- /.container -->
     </main>
     <!-- /.main -->
     <footer class="footer">
       <div class="breadcrumb">
-        <p><a href="./index.html">Topページ</a> > Change Menu</p>
+        <p><a href="./index.html">Topページ</a> > Appear Sub Menu</p>
       </div>
       <!-- /.breadcrumb -->
     </footer>

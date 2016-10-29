@@ -8,7 +8,7 @@
         top: 0;
         height: 100%;
         background: #e5f6ff;
-        padding: 40px 30px;
+        padding: 25px 30px;
         transition: all 0.3s ease-in-out;
         @include respond-to(small) {
             width: 300px;
@@ -29,7 +29,7 @@
         background: #c0c0c0;
     }
     &__list {
-        margin-top: 100px;
+        //margin-top: 100px;
         li {
             line-height: 2;
             font-size: 1.6rem;
