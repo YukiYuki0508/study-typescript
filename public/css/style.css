@@ -383,7 +383,7 @@ h2 {
   top: 0;
   height: 100%;
   background: #e5f6ff;
-  padding: 40px 30px;
+  padding: 25px 30px;
   transition: all 0.3s ease-in-out; }
   @media print, screen and (min-width: 768px) {
     .nav--toggle {
@@ -403,16 +403,15 @@ h2 {
   z-index: 9998;
   background: #c0c0c0; }
 
-.nav__list {
-  margin-top: 100px; }
-  .nav__list li {
-    line-height: 2;
-    font-size: 1.6rem; }
-  .nav__list a {
-    transition: all 0.3s ease-in-out; }
-    .nav__list a:hover {
-      opacity: 0.66;
-      text-decoration: none; }
+.nav__list li {
+  line-height: 2;
+  font-size: 1.6rem; }
+
+.nav__list a {
+  transition: all 0.3s ease-in-out; }
+  .nav__list a:hover {
+    opacity: 0.66;
+    text-decoration: none; }
 
 .main--scroll-top {
   height: 1000px; }
@@ -610,6 +609,16 @@ h2 {
   .header--with-nav .openMenu {
     display: none; }
 
+@media print, screen and (min-width: 768px) {
+  .linked01 {
+    padding-top: 250px;
+    margin-top: -100px; } }
+
+@media print, screen and (min-width: 768px) {
+  .linked02 {
+    padding-top: 120px;
+    margin-top: -100px; } }
+
 .open-nav ul {
   padding-top: 50px;
   line-height: 2;
@@ -663,7 +672,7 @@ h2 {
     width: 140px;
     text-align: center; }
     .btn--open-menu--fixed {
-      top: 80px;
+      top: 25px;
       bottom: auto; }
   .btn--close-menu {
     position: relative;
@@ -672,7 +681,7 @@ h2 {
     left: 10px;
     text-align: center; }
     .btn--close-menu--fixed {
-      top: 40px;
+      top: 0;
       bottom: auto; }
       @media print, screen and (min-width: 768px) {
         .btn--close-menu--fixed {

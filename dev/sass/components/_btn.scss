@@ -20,7 +20,7 @@
         width: 140px;
         text-align: center;
         &--fixed {
-            top: 80px;
+            top: 25px;
             bottom: auto;
         }
     }
@@ -31,7 +31,7 @@
         left: 10px;
         text-align: center;
         &--fixed {
-            top: 40px;
+            top: 0;
             bottom: auto;
             @include respond-to(small) {
                 left: 100px;

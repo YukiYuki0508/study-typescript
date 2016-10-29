@@ -12,16 +12,7 @@ export class AppearSubMenu {
 
     constructor(private option: Options) {
         this.setContents();
-        this.setListHeight();
         this.handleEvents();
-        this.toggleMenu();
-    }
-
-    setListHeight() {
-        this.$mainMenu.children("li").css({ // liとnavの高さを合わせる
-            height: this.navHeight +"px",
-            "line-height": this.navHeight +"px",
-        });
     }
 
     setContents() {
@@ -32,26 +23,53 @@ export class AppearSubMenu {
     handleEvents() {
         $(window).on("orientationchange resize load", () => {  // orientation:横向きにした時、縦向きにした時を検出して、イベントを取得する
             this.getWindowWidth();
+            this.setListHeight();
+        });
+
+        this.$mainMenu.children("li").on({
+            "mouseenter": (e: any) => {
+                this.mouseOver(e);
+            },
+            "mouseleave": (e: any) => {
+                this.mouseOut(e);
+            }
         });
     }
 
     getWindowWidth() {
         this.windowWidth = $(window).width();
-        console.log(this.windowWidth);
     }
 
-    toggleMenu() {
-        console.log(this.windowWidth);
-        if(this.windowWidth > 768) { // pcの部分は除去する
-            this.$mainMenu.children("li").hover((e: any) => {
-                this.$mainMenu.find("ul").css({
-                    width: e.currentTarget.offsetWidth + "px",
-                    top: this.$mainMenu.innerHeight() + "px",
-                });
-                $(e.currentTarget).children('ul').show();
-            }, (e: any) => {
-                $(e.currentTarget).children('ul').hide();
-            });
+    setListHeight() {
+        let smpStyle = { // liとnavの高さを合わせる
+            height: "auto",
+            "line-height": "2",
+        };
+        let pcStyle = { // liとnavの高さを合わせる
+            height: this.navHeight +"px",
+            "line-height": this.navHeight +"px",
+        };
+
+        this.$mainMenu.children("li").css(this.windowWidth < 768 ? smpStyle : pcStyle)
+    }
+
+    mouseOver(event) {
+        if(this.windowWidth < 768) { // spの部分は除去する
+            return;
         }
+
+        this.$mainMenu.find("ul").css({
+            width: event.currentTarget.offsetWidth + "px",
+            top: this.$mainMenu.innerHeight() + "px",
+        });
+        $(event.currentTarget).children('ul').show();
+    }
+
+    mouseOut(event) {
+        if(this.windowWidth < 768) { // spの部分は除去する
+            return;
+        }
+
+        $(event.currentTarget).children('ul').hide();
     }
 }
