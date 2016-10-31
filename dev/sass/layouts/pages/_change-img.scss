@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+.img-wrapper {
+    position: relative;
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+    & img:first-child {
+        position: relative;
+        opacity: 1;
+    }
+}
