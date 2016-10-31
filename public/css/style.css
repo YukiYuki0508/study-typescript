@@ -310,7 +310,8 @@ html {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: #ddd; }
+  background: #ddd;
+  z-index: 10; }
 
 .breadcrumb {
   color: #333;
@@ -531,7 +532,8 @@ h2 {
   width: 100%;
   background: rgba(133, 133, 133, 0.5);
   height: 100px;
-  margin-top: 0 !important; }
+  margin-top: 0 !important;
+  z-index: 30; }
   .header--with-nav .header__upper {
     vertical-align: top;
     width: 100%;

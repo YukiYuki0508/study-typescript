@@ -60,7 +60,7 @@ export class ChangeMenu {
             position: "fixed",
             top: "0",
             left: "0",
-            "z-index": "9998",
+            "z-index": "39",
             height: this.windowHeight + "px",
         };
         let pcStyle = {
