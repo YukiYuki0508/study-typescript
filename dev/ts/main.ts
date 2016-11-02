@@ -174,3 +174,17 @@ $(function() {
 
     new AppearSubMenu(options);
 });
+
+import { ChangeImg } from "./change-img";
+
+$(function() {
+    let options = {
+        lead: ".img-wrapper img",
+        leadNumber: 3,
+        startSpeed: 1000,
+        delaySpeed: 2500,
+        fadeSpeed: 1000,
+    };
+
+    new ChangeImg(options);
+});

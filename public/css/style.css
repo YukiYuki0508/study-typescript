@@ -655,6 +655,17 @@ h2 {
             text-decoration: none;
             opacity: 0.66; }
 
+.img-wrapper {
+  position: relative; }
+  .img-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; }
+  .img-wrapper img:first-child {
+    position: relative;
+    opacity: 1; }
+
 .btn {
   background: #ccc;
   color: #333;
