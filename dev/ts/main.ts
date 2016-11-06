@@ -188,3 +188,18 @@ $(function() {
 
     new ChangeImg(options);
 });
+
+import { LocalStorage } from "./localstorage";
+
+$(function() {
+    let options = {
+        result: "#result",
+        put: "#put",
+        key: "#key",
+        value: "#value",
+        remove: "#remove",
+        clear: "#clear",
+    };
+
+    new LocalStorage(options);
+});
