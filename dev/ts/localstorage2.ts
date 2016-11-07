@@ -7,16 +7,16 @@ interface Options {
 }
 
 export class LocalStorage2 {
-    setdata: string; //localStorageのキー
+    setDataList: string; //localStorageのキー
     obj: {
         data: string;
     };
     key: string;
-    $value: JQuery;
-    $save:JQuery;
-    $result: JQuery;
-    $remove: JQuery;
-    $clear: JQuery;
+    $valueArea: JQuery;
+    $saveBtn:JQuery;
+    $resultArea: JQuery;
+    $removeBtn: JQuery;
+    $clearBtn: JQuery;
 
     constructor(private option: Options) {
         this.setContents();
@@ -26,28 +26,30 @@ export class LocalStorage2 {
     }
 
     setContents() {
-        this.setdata = "name";
+        this.setDataList = "name";
         this.key = "data";
         this.obj = {
             "data": "名無し",
         };
-        this.$value = $(this.option.value);
-        this.$save = $(this.option.save);
-        this.$result = $(this.option.result);
-        this.$remove = $(this.option.remove);
-        this.$clear = $(this.option.clear);
+        this.$valueArea = $(this.option.value);
+        this.$saveBtn = $(this.option.save);
+        this.$resultArea = $(this.option.result);
+        this.$removeBtn = $(this.option.remove);
+        this.$clearBtn = $(this.option.clear);
     }
 
     handleEvents() {
-        this.$save.on("click", () => {
+        this.$saveBtn.on("click", () => {
             this.setData();
+            this.showData();
         });
-
-        this.$remove.on("click", () => {
+        this.$removeBtn.on("click", () => {
             this.removeData();
+            this.showData();
         });
-        this.$clear.on("click", () => {
+        this.$clearBtn.on("click", () => {
             this.removeAllData();
+            this.showData();
         });
 
     }
@@ -55,38 +57,36 @@ export class LocalStorage2 {
     setObject(obj) {
         //2. JSONデータに保存して登録する
         let str = JSON.stringify(obj);
-        localStorage.setItem(this.setdata, str);
+        localStorage.setItem(this.setDataList, str);
     }
 
     setData() {
-        let val = this.$value.val();
+        let val = this.$valueArea.val();
         let obj = this.getData();
-
-        if(!obj || !val) {
-            obj = {};
+        if(!val) {
+            obj = this.obj;
+        } else {
+            obj[this.key] = val;
         }
         // 1. データをオブジェクト保存する
-        obj[this.key] = val;
         this.setObject(obj);
-        this.showData();
-
     }
 
     getData() {
         // JSONデータに戻してから取得する
-        let str = localStorage.getItem(this.setdata);
+        let str = localStorage.getItem(this.setDataList);
         return JSON.parse(str);
     }
 
     showData() {
-        this.$result.empty(); //子要素をすべて削除
+        this.$resultArea.empty(); //子要素をすべて削除
         let obj = this.getData();
         if(!obj) {
             obj = this.obj;
         }
 
         for(let key in obj) {
-            this.$result.append(obj[key] + key);
+            this.$resultArea.append(obj[key] + key);
         }
     }
 
@@ -95,13 +95,17 @@ export class LocalStorage2 {
         if(obj) {
             delete obj[this.key];
             this.setObject(obj);
-            this.showData();
+        }
+        if(!obj[this.key]) {
+            this.setObject(this.obj);
+            this.$valueArea.val("");
         }
     }
 
     removeAllData() {
         localStorage.clear();
-        this.showData();
+        this.setObject(this.obj);
+        this.$valueArea.val("");
     }
 
     initialSet() {

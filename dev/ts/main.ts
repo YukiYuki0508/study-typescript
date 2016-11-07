@@ -208,11 +208,11 @@ import { LocalStorage2 } from "./localstorage2";
 
 $(function() {
     let options = {
-        value: "#value",
-        save: "#put",
+        value: "#value2",
+        save: "#save",
         result: ".result",
-        remove: "#remove",
-        clear: "#clear",
+        remove: "#remove2",
+        clear: "#clear2",
     };
 
     new LocalStorage2(options);
