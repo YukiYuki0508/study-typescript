@@ -22,23 +22,20 @@ export class LocalStorage {
     $clear: JQuery;
 
     constructor(private option: Options) {
-        this.initialize();
         this.setContents();
         this.handleEvents();
         this.setData();
         this.showStorage();
     }
 
-    initialize() {
+    setContents() {
         this.key = "test";
         this.obj= {
             "foo": "aaa",
             "bar": "bbb",
             "hoge": "ccc"
         };
-    }
 
-    setContents() {
         this.$result = $(this.option.result);
         this.$put = $(this.option.put);
         this.$key = $(this.option.key);
@@ -81,8 +78,8 @@ export class LocalStorage {
             let key = this.$key.val();
             let value = this.$value.val();
             let obj = this.getObject();
-            if(!obj){
-                obj = new Object();
+            if(!obj) {
+                obj = {};
             }
             obj[key] = value;
             this.setObject(obj);

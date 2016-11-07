@@ -203,3 +203,17 @@ $(function() {
 
     new LocalStorage(options);
 });
+
+import { LocalStorage2 } from "./localstorage2";
+
+$(function() {
+    let options = {
+        value: "#value",
+        save: "#put",
+        result: ".result",
+        remove: "#remove",
+        clear: "#clear",
+    };
+
+    new LocalStorage2(options);
+});
