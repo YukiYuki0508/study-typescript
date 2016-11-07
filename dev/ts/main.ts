@@ -188,3 +188,31 @@ $(function() {
 
     new ChangeImg(options);
 });
+
+import { OriginalLocalStorage } from "./original-localstorage";
+
+$(function() {
+    let options = {
+        result: "#original_result",
+        put: "#original_put",
+        key: "#original_key",
+        value: "#original_value",
+        remove: "#original_remove",
+        clear: "#original_clear",
+    };
+
+    new OriginalLocalStorage(options);
+});
+
+import { LocalStorage } from "./localstorage";
+
+$(function() {
+    let options = {
+        value: "#value",
+        save: "#save",
+        result: ".result",
+        remove: "#remove",
+    };
+
+    new LocalStorage(options);
+});
