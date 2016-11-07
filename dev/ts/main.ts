@@ -189,31 +189,30 @@ $(function() {
     new ChangeImg(options);
 });
 
+import { OriginalLocalStorage } from "./original-localstorage";
+
+$(function() {
+    let options = {
+        result: "#original_result",
+        put: "#original_put",
+        key: "#original_key",
+        value: "#original_value",
+        remove: "#original_remove",
+        clear: "#original_clear",
+    };
+
+    new OriginalLocalStorage(options);
+});
+
 import { LocalStorage } from "./localstorage";
 
 $(function() {
     let options = {
-        result: "#result",
-        put: "#put",
-        key: "#key",
         value: "#value",
+        save: "#save",
+        result: ".result",
         remove: "#remove",
-        clear: "#clear",
     };
 
     new LocalStorage(options);
-});
-
-import { LocalStorage2 } from "./localstorage2";
-
-$(function() {
-    let options = {
-        value: "#value2",
-        save: "#save",
-        result: ".result",
-        remove: "#remove2",
-        clear: "#clear2",
-    };
-
-    new LocalStorage2(options);
 });

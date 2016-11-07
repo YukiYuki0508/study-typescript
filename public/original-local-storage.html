@@ -3,7 +3,7 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Local Storage2</title>
+  <title>Local Storage</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no,address=no,email=no">
@@ -24,38 +24,26 @@
 <body>
   <div class="page-container">
     <header class="header">
-      <h1>Local Storage2</h1>
+      <h1>Local Storage</h1>
     </header>
     <!-- /.header -->
     <main class="main">
       <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            value:
-            <input type="text" id="value2">
-            <input type="submit" id="save" value="Save">
-            <input type="submit" id="remove2" value="Remove">
-            <input type="submit" id="clear2" value="Clear All">
-          </div>
-          <!-- /.col-xs-12 -->
-        </div>
-        <!-- /.row -->
-        <div class="row">
-          <div class="col-xs-12">
-            こんにちは
-            <span class="result"></span>さん。はじめまして。
-            <span class="result"></span>さん。ごきげんいかがですか。
-          </div>
-          <!-- /.col-xs-12 -->
-        </div>
-        <!-- /.row -->
+        key:
+        <input type="text" id="original_key"> value:
+        <input type="text" id="original_value">
+        <input type="submit" id="original_put" value="Put">
+        <input type="submit" id="original_remove" value="Remove">
+        <input type="submit" id="original_clear" value="Clear All">
+        <div id="result"></div>
+        <!-- /#result -->
       </div>
       <!-- /.container -->
     </main>
     <!-- /.main -->
     <footer class="footer">
       <div class="breadcrumb">
-        <p><a href="./index.html">Topページ</a> > Local Storage2</p>
+        <p><a href="./index.html">Topページ</a> > Local Storage</p>
       </div>
       <!-- /.breadcrumb -->
     </footer>

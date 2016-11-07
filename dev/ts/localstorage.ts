@@ -1,108 +1,100 @@
 interface Options {
-    result: string;
-    put: string;
-    key: string;
     value: string;
+    save: string;
+    result: string;
     remove: string;
-    clear: string;
 }
 
 export class LocalStorage {
-    key: string; // localStorageのキー
+    setDataList: string; //localStorageのキー
     obj: {
-        foo: string;
-        bar: string;
-        hoge: string;
+        data: string;
     };
-    $result:JQuery;
-    $put: JQuery;
-    $key: JQuery;
-    $value: JQuery;
-    $remove: JQuery;
-    $clear: JQuery;
+    key: string;
+    $inputArea: JQuery;
+    $saveBtn:JQuery;
+    $resultArea: JQuery;
+    $removeBtn: JQuery;
 
     constructor(private option: Options) {
         this.setContents();
         this.handleEvents();
-        this.setData();
-        this.showStorage();
+        this.initialSet();
+        this.showData();
     }
 
     setContents() {
-        this.key = "test";
-        this.obj= {
-            "foo": "aaa",
-            "bar": "bbb",
-            "hoge": "ccc"
+        this.setDataList = "name";
+        this.key = "data";
+        this.obj = {
+            "data": "名無し",
         };
-
-        this.$result = $(this.option.result);
-        this.$put = $(this.option.put);
-        this.$key = $(this.option.key);
-        this.$value = $(this.option.value);
-        this.$remove = $(this.option.remove);
-        this.$clear = $(this.option.clear);
-    }
-
-    showStorage() {
-        this.$result.empty(); // empty():要素内の子要素(テキストも対象)を全て削除します。
-        let obj = this.getObject();
-        for(let key in obj) {
-            this.$result.append("<p>" + key + ":" + obj[key] + "</p>");
-        }
-    }
-
-    getObject () {
-        let str = localStorage.getItem(this.key);
-        return JSON.parse(str);
-    }
-
-    setObject(obj) {
-        let str = JSON.stringify(obj);
-        localStorage.setItem(this.key, str);
+        this.$inputArea = $(this.option.value);
+        this.$saveBtn = $(this.option.save);
+        this.$resultArea = $(this.option.result);
+        this.$removeBtn = $(this.option.remove);
     }
 
     handleEvents() {
-        this.$put.on("click", () => {
-            this.additionKeyValue();
+        this.$saveBtn.on("click", () => {
+            this.setData();
+            this.showData();
         });
-        this.$remove.on("click", () => {
-            this.removeValue();
+        this.$removeBtn.on("click", () => {
+            this.removeData();
+            this.showData();
         });
-        this.$clear.on("click", () => {
-            this.removeAllData();
-        });
-    }
-
-    additionKeyValue() {
-            let key = this.$key.val();
-            let value = this.$value.val();
-            let obj = this.getObject();
-            if(!obj) {
-                obj = {};
-            }
-            obj[key] = value;
-            this.setObject(obj);
-            this.showStorage();
-    }
-
-    removeValue() {
-            let key = this.$key.val();
-            let obj = this.getObject();
-            if(obj) {
-                delete obj[key];
-                this.setObject(obj);
-                this.showStorage();
-            }
-    }
-
-    removeAllData() {
-            localStorage.clear();
-            this.showStorage();
     }
 
     setData() {
-        let data = this.getObject();
+        let val = this.$inputArea.val();
+        let obj = this.getData();
+        if(!val) {
+            obj = this.obj;
+        } else {
+            obj[this.key] = val;
+        }
+        // 1. オブジェクトを保存する
+        this.setObject(obj);
+    }
+
+    setObject(obj) {
+        //2. JSONデータに保存して登録する
+        let str = JSON.stringify(obj);
+        localStorage.setItem(this.setDataList, str);
+    }
+
+    getData() {
+        // JSONデータに戻してから取得する
+        let str = localStorage.getItem(this.setDataList);
+        return JSON.parse(str);
+    }
+
+    showData() {
+        this.$resultArea.empty(); //子要素をすべて削除
+        let obj = this.getData();
+        if(!obj) {
+            obj = this.obj;
+        }
+        for(let key in obj) {
+            this.$resultArea.append(obj[key]);
+        }
+    }
+
+    removeData() {
+        let obj = this.getData();
+        if(obj) {
+            delete obj[this.key];
+            this.setObject(obj);
+        }
+        if(!obj[this.key]) {
+            this.setObject(this.obj);
+            this.$inputArea.val("");
+        }
+    }
+
+    initialSet() {
+        let data = this.getData();
         if(!data) {
             this.setObject(this.obj);
         }
