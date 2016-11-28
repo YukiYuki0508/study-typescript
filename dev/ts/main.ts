@@ -216,3 +216,13 @@ $(function() {
 
     new LocalStorage(options);
 });
+
+import { AccordionMenu } from "./accordion";
+
+$(function() {
+    let options = {
+        accordion: ".accordion-menu",
+    };
+
+    new AccordionMenu(options);
+});
