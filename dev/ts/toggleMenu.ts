@@ -14,6 +14,7 @@ interface Menu {
 // optionsの型を決める
 interface Options {
     nav: string;
+    navList: string;
     btnOpen: string;
     btnClose: string;
     overlay?: string;
@@ -21,6 +22,7 @@ interface Options {
 
 class ToggleMenu implements Menu{ //インターフェースのメンバー全てがpublicとなる為、アクセス修飾子がprivateの場合もコンパイルエラーとなる。
     public $nav: JQuery;
+    public $navList: JQuery;
     public $btnOpen: JQuery;
     public $btnClose: JQuery;
     public overlay: string;
@@ -33,6 +35,7 @@ class ToggleMenu implements Menu{ //インターフェースのメンバー全�
     // $navのセット
     setOptions(): any {
         this.$nav = $(this.options.nav);
+        this.$navList = $(this.options.navList);
         this.$btnOpen = $(this.options.btnOpen);
         this.$btnClose = $(this.options.btnClose);
         this.overlay = this.options.overlay || '.nav-overlay';
@@ -42,7 +45,9 @@ class ToggleMenu implements Menu{ //インターフェースのメンバー全�
         $(window).on("load", () => {
             this.close();
         });
-
+        this.$navList.on("click", ()=>{
+            this.close();
+        });
         this.$btnClose.on("click",() => {
            this.close();
         });
