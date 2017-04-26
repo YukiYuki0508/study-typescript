@@ -27,3 +27,5 @@ typings
 
 ### Others ###
 dev/test/coverage/
+
+.vscode/settings.json
