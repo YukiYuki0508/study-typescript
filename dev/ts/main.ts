@@ -10,6 +10,7 @@ import { ToggleMenu } from "./toggleMenu";
 $(function() {
     let options = {
         nav: ".nav--toggle",
+        navList: ".nav__list a",
         btnOpen: ".open-menu",
         btnClose: ".close-menu",
     };
