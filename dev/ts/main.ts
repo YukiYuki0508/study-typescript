@@ -227,3 +227,14 @@ $(function() {
 
     new AccordionMenu(options);
 });
+
+import { DoubleTab } from "./double-tab";
+
+$(function() {
+    let options = {
+        tab: ".double-tab",
+        tabContent: ".double-tab-content"
+    };
+
+    new DoubleTab(options);
+})
